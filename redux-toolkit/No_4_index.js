@@ -1,16 +1,15 @@
 const store = require('./n.store')
 const cakeActions = require('./n.cakeSlice').cakeActions
 
-//<!------------*****For Api calls/ Ascync Function*********------!>//
+------------*****For Api calls/ Ascync Function*********------!
 
-// I HAVE COOMENTED IT OUT TO VIOID CONFUSION
+I HAVE COOMENTED IT OUT TO VIOID CONFUSION
 
-//     const fetchusers = require ('./apicalls').fetchusers
-//     store.dispatch(fetchusers())
+    const fetchusers = require ('./apicalls').fetchusers
+    store.dispatch(fetchusers())
 
-//we commment out unsubscribe because fetch users is an async function
-// we decooment it when using other action types
-//<!------------*****For Api calls/ Ascync Function*********------!>//
+we commment out unsubscribe because fetch users is an async function
+we decooment it when using other action types
 
 
 
