@@ -4,7 +4,31 @@ const createstore = redux.createStore
 
 
 
-//THIS IS AN ACTION ,an action is that with the type property{type:CAKE...} 
+//THIS IS AN ACTION ,an action is an object with a type property{type:CAKE...} 
+// This is an action
+    // {
+    //     type:CAKE_ORDERED;
+    //     quantity:qty
+       
+    //     //is most imprtant
+        
+    
+    // }
+
+//ACTION CREATOR- Is a function that returns an action
+//THIS IS AN ACTION CREATOR
+function ordercake(qty=1){
+ 
+    return {
+        type:CAKE_ORDERED;
+        quantity:qty
+       
+        //is most imprtant
+        
+    
+    }
+
+}
 
 const CAKE_ORDERED = 'CAKE_ORDERED';
 function ordercake(qty=1){
@@ -19,6 +43,10 @@ function ordercake(qty=1){
 //create an ACTION CREATOR(which is a function that implements an action e.g fuction ordercake)
 
 }
+
+
+//REDUCERS ----> Specify how the apps state changes in response to actions sent to the store.
+//Reducer is a function that accpts state and action as arguments and returns the next state of the application
 
 //REDUCERS  ----> Can be summed up as (prevstate,action)=>{newstate'this new state depend on action performed'}
 
