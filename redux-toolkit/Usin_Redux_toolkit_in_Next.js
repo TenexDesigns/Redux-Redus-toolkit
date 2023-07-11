@@ -20,7 +20,7 @@ import counterReducer from './reducers/counterReducer.js';
 
 const store = configureStore({
   reducer: {
-    counter:counterReducer
+    count:counterReducer
   },
   // Add any middleware or enhancers here if needed
 });
@@ -86,14 +86,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../store/reducers/counterReducer';
 
 function Counter() {
-  const counter = useSelector(state => state.counter);
+  const counter = useSelector(state => state.count.counter);----> Use the key you used in the store to define the reducer to access the state here ----->This is a debugging task. The issue seems to be with how youre accessing the noCakes state in your useSelector hook.In your useSelector hook, youre trying to access state.noCakes, but based on your store configuration, it should be state.cake.noCakes. This is because you've defined your cakeReducer under the key cake in your store.
   const dispatch = useDispatch();
 
   return (
     <div>
       <p>Count: {counter}</p>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <button onClick={() => dispatch(increment(2))}>Increment</button>
+      <button onClick={() => dispatch(decrement(2))}>Decrement</button>
     </div>
   );
 }
