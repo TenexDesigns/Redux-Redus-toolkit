@@ -16,10 +16,12 @@ javascript
 Copy code
 // store/index.js
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './reducers';
+import counterReducer from './reducers/counterReducer.js';
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    counter:counterReducer
+  },
   // Add any middleware or enhancers here if needed
 });
 
@@ -27,19 +29,29 @@ export default store;
 In this example, configureStore is used from Redux Toolkit to create the store. You can pass the root reducer (created in the next step) to the reducer option.
 
 Step 4: Create reducers
-Inside the store folder, create a folder called reducers. Each individual reducer should have its own file. For example, let's create a counterReducer.js file:
+Inside the store folder, create a folder called reducers. Each individual reducer should have its own file. For example, lets create a counterReducer.js file:
 
 javascript
 Copy code
 // store/reducers/counterReducer.js
 import { createSlice } from '@reduxjs/toolkit';
 
+const state1 ={
+    counter:0
+}
+
 const counterSlice = createSlice({
   name: 'counter',
-  initialState: 0,
+  initialState: state1,
   reducers: {
-    increment: state => state + 1,
-    decrement: state => state - 1,
+    increment: (state,action)=>{
+            state.counter = state.counter - action.payload
+
+        },
+    decrement: (state,action)=>{
+            state.counter = state.counter - action.payload
+
+        },
   },
 });
 
