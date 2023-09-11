@@ -1,7 +1,8 @@
 To use Redux Toolkit in your Next.js app, you can follow these steps:
 
 Step 1: Create a Next.js project
-Set up a new Next.js project using the Next.js CLI or any other method of your choice. Make sure you have Node.js and npm installed.
+Set up a new Next.js project using the Next.js CLI or any other method of your choice. 
+  Make sure you have Node.js and npm installed.
 
 Step 2: Install Redux Toolkit
 In the root folder of your Next.js project, install Redux Toolkit using npm or yarn:
