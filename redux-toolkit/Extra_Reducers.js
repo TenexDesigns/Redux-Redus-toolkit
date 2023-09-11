@@ -1,8 +1,15 @@
-Redux Toolkit is a toolset that helps to simplify common Redux use cases. It provides functions to handle store setup, state setup, and reducer writing. One of the features provided by Redux Toolkit is extraReducers which can be used in the creation of slices.
+Redux Toolkit is a toolset that helps to simplify common Redux use cases. It provides functions to handle store setup,
+  state setup, and reducer writing. One of the features provided by Redux Toolkit is extraReducers which can be used 
+  in the creation of slices.
 
-A slice in Redux Toolkit represents a portion of the Redux store and the logic that updates that portion. It includes a reducer function, action creators, and action types related to a specific feature of the application. The createSlice function generates these pieces of code automatically redux-toolkit.js.org, freecodecamp.org.
+A slice in Redux Toolkit represents a portion of the Redux store and the logic that updates that portion.
+  It includes a reducer function, action creators, and action types related to a specific feature of the application. 
+  The createSlice function generates these pieces of code automatically redux-toolkit.js.org, freecodecamp.org.
 
-The reducers property in the createSlice function both creates an action creator function and responds to that action in the slice reducer. The extraReducers allows you to respond to an action in your slice reducer but does not create an action creator function. You would use extraReducers when you are dealing with an action that you have already defined somewhere else. The most common examples are responding to a createAsyncThunk action and responding to an action from another slice stackoverflow.com.
+The reducers property in the createSlice function both creates an action creator function and responds to that action in
+  the slice reducer. The extraReducers allows you to respond to an action in your slice reducer but does not create 
+  an action creator function. You would use extraReducers when you are dealing with an action that you have
+    already defined somewhere else. The most common examples are responding to a createAsyncThunk action and responding to an action from another slice stackoverflow.com.
 
 Here is an example of using extraReducers:
 
