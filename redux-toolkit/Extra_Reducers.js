@@ -9,7 +9,8 @@ A slice in Redux Toolkit represents a portion of the Redux store and the logic t
 The reducers property in the createSlice function both creates an action creator function and responds to that action in
   the slice reducer. The extraReducers allows you to respond to an action in your slice reducer but does not create 
   an action creator function. You would use extraReducers when you are dealing with an action that you have
-    already defined somewhere else. The most common examples are responding to a createAsyncThunk action and responding to an action from another slice stackoverflow.com.
+    already defined somewhere else. The most common examples are responding to a createAsyncThunk action and responding
+      to an action from another slice stackoverflow.com.
 
 Here is an example of using extraReducers:
 
@@ -35,7 +36,8 @@ const counterSlice = createSlice({
 
 export const { increment, decrement } = counterSlice.actions;
 export default counterSlice.reducer;
-In the above example, someAction and anotherAction are actions that are defined elsewhere in the application. The extraReducers property uses a builder callback function to add more cases to the reducer, which respond to these other actions stackoverflow.com.
+In the above example, someAction and anotherAction are actions that are defined elsewhere in the application.
+  The extraReducers property uses a builder callback function to add more cases to the reducer, which respond to these other actions stackoverflow.com.
 
 Also, extraReducers can be used to handle actions created by createAsyncThunk:
 
